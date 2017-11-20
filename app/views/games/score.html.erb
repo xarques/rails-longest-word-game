@@ -1,0 +1,10 @@
+<h1>Result</h1>
+<% if @result == "word-not-in-grid" %>
+  <p>Sorry but <%= @word %> can't be build out of <%= @letters %></p>
+<% elsif  @result == "word-not-exist" %>
+  <p>Sorry but <%= @word %> does not seem to be a valid English word</p>
+<% else %>
+  <p><strong>Congratulations! </strong> <%= @word %> is a valid English word</p>
+<% end %>
+<br>
+<%= link_to "Play again", new_path %>
